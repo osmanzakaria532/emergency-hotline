@@ -6,13 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emergency Hotline</title>
 
-    <!-- TailwindCss CDN -->
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="./fonts.css">
+    
+    <!-- daisyui and TailwindCss CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-gray-500">
+<body class="">
 
-    <h1 class="text-4xl font-bold text-center text-blue-600 my-8">Emergency Hotline</h1>
+    <!-- Navbar -->
+    <header class="">
+        <nav class="py-6 px-4 bg-white">
+            <div class="max-w-[1200px] mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <a href="">
+                        <div class="flex items-center justify-center gap-2">
+                            <div>
+                                <img src="./assets/logo.png" alt="" class="w-10 h-10">
+                            </div>
+                            <div class="text-[#006747] font-bold md:text-xl">
+                                <h2 class="-mt-2.5">Emergency</h2>
+                                <h2 class="leading-3">Service</h2>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="flex items-center gap-5">
+                        <div class="bg-[#41FF6B]/10 rounded-full py-1 md:py-2 px-3 md:px-5">
+                            <span class="font-bold">0</span>
+                            <span>
+                                <img src="./assets/heart.png" alt="" class="w-6 h-6 inline-block ml-1">
+                            </span>
+                        </div>
+                        <div class="flex items-center bg-[#41FF6B]/10 rounded-full py-1 md:py-2 px-3 md:px-5">
+                            <span class="font-bold">100</span>
+                            <span>
+                                <img src="./assets/coin.png" alt="" class="w-6 h-6 inline-block ml-2">
+                            </span>
+                        </div>
+                        <a href="" class="bg-[#00A63E] text-white text-sm btn rounded-full !py-1 md:py-2 !px-3 md:px-5">
+                            <span>0</span>
+                            <span>Copy</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Banner -->
+        <div class="bg-[url('./assets/banner-bg.jpg')] bg-cover bg-no-repeat bg-center py-3 px-3 lg:px-0">
+            <div class="max-w-[1200px] mx-auto flex flex-col items-center gap-3">
+                <div>
+                    <img src="./assets/logo.png" alt="" class="w-24 h-24">
+                </div>
+                <h1 class="text-xl md:text-[40px] font-bold text-white text-center">Emergency Service Directory</h1>
+                <p class="text-white text-center lg:text-xl font-medium md:px-10">
+                    Government Emergency Services at Your Fingertip – A Project by Government of the People's Republic
+                    of
+                    Bangladesh
+                </p>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main></main>
+
 
     <script src="./js/javascript.js"></script>
 </body>
