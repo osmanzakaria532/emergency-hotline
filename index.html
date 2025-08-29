@@ -8,10 +8,14 @@
 
     <!-- Google Fonts -->
     <link rel="stylesheet" href="./fonts.css">
-    
+
     <!-- daisyui and TailwindCss CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="">
@@ -34,19 +38,19 @@
                     </a>
                     <div class="flex items-center gap-5">
                         <div class="bg-[#41FF6B]/10 rounded-full py-1 md:py-2 px-3 md:px-5">
-                            <span class="font-bold">0</span>
+                            <span id="heartValue" class="font-bold">0</span>
                             <span>
                                 <img src="./assets/heart.png" alt="" class="w-6 h-6 inline-block ml-1">
                             </span>
                         </div>
                         <div class="flex items-center bg-[#41FF6B]/10 rounded-full py-1 md:py-2 px-3 md:px-5">
-                            <span class="font-bold">100</span>
+                            <span id="coins" class="font-bold">100</span>
                             <span>
                                 <img src="./assets/coin.png" alt="" class="w-6 h-6 inline-block ml-2">
                             </span>
                         </div>
                         <a href="" class="bg-[#00A63E] text-white text-sm btn rounded-full !py-1 md:py-2 !px-3 md:px-5">
-                            <span>0</span>
+                            <span id="copy_increment_value">0</span>
                             <span>Copy</span>
                         </a>
                     </div>
@@ -72,7 +76,155 @@
     </header>
 
     <!-- Main -->
-    <main></main>
+    <main class="max-w-[1200px] mx-auto pt-4">
+        <div class="flex justify-between items-start gap-5 pt-12 pb-20 px-3 lg:px-0">
+            <div class="max-w-[900px]">
+                <div class="grid grid-cols-3 gap-6">
+    
+                    <!-- National Emergency -->
+                    <div class="card bg-base-100 shadow-sm">
+                        <div class="flex justify-between items-center p-3">
+                            <div class="p-[14px] bg-[#FFE3E2] rounded-2xl">
+                                <img src="./assets/emergency.png" alt="" class="w-8 h-8">
+                            </div>
+                            <div id="national_emergency_number" class="cursor-pointer">
+                                <i class="fa-regular fa-heart text-2xl text-[#5C5C5C] heartButton"></i>
+                            </div>
+                        </div>
+                        <div class="p-3">
+                            <div>
+                                <h2 id="" class="title">National Emergency Number</h2>
+                                <p>
+                                    National Emergency
+                                </p>
+                                <div id="" class="service_number">
+                                    999
+                                </div>
+                                <p>All</p>
+                            </div>
+                            <div class="flex gap-3">
+                                <a
+                                    class="w-[104px] border-1 border-[#D4D6D5] text-center py-1 rounded-md cursor-pointer copy_btn">
+                                    <span>
+                                        <i class="fa-regular fa-copy"></i>
+                                    </span>
+                                    Copy
+                                </a>
+                                <a id=""
+                                    class="w-[104px] border-1 border-[#D4D6D5] text-center py-1 bg-[#00A63E] text-white rounded-md cursor-pointer call_btn">
+                                    <span>
+                                        <i class="fa-solid fa-phone"></i>
+                                    </span>
+                                    Call
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Police Helpline Number -->
+                    <div class="card bg-base-100 shadow-sm">
+                        <div class="flex justify-between items-center p-3">
+                            <div class="p-[14px] bg-[#FFE3E2] rounded-2xl">
+                                <img src="./assets/police.png" alt="" class="w-8 h-8">
+                            </div>
+                            <div id="police_helpline_number" class="cursor-pointer">
+                                <i class="fa-regular fa-heart text-2xl text-[#5C5C5C]"></i>
+                            </div>
+                        </div>
+                        <div class="p-3">
+                            <div>
+                                <h2 class="title">Police Helpline Number</h2>
+                                <p>
+                                    Police
+                                </p>
+                                <div class="service_number">
+                                    999
+                                </div>
+                                <p>All</p>
+                            </div>
+                            <div class="flex gap-3" onclick="navigator.clipboard.writeText(this.dataset.copy)">
+                                <a
+                                    class="w-[104px] border-1 border-[#D4D6D5] text-center py-1 rounded-md cursor-pointer copy_btn">
+                                    <span>
+                                        <i class="fa-regular fa-copy"></i>
+                                    </span>
+                                    Copy
+                                </a>
+                                <a id=""
+                                    class="w-[104px] border-1 border-[#D4D6D5] text-center py-1 bg-[#00A63E] text-white rounded-md cursor-pointer call_btn">
+                                    <span>
+                                        <i class="fa-solid fa-phone"></i>
+                                    </span>
+                                    Call
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Fire Service Number -->
+                    <div class="card bg-base-100 shadow-sm">
+                        <div class="flex justify-between items-center p-3">
+                            <div class="p-[14px] bg-[#FFE3E2] rounded-2xl">
+                                <img src="./assets/police.png" alt="" class="w-8 h-8">
+                            </div>
+                            <div id="fire_service_number" class="cursor-pointer heartButton">
+                                <i class="fa-regular fa-heart text-2xl text-[#5C5C5C]"></i>
+                            </div>
+                        </div>
+                        <div class="p-3">
+                            <div>
+                                <h2 class="title">Fire Service Number</h2>
+                                <p>
+                                    Fire Service
+                                </p>
+                                <div class="service_number">
+                                    999
+                                </div>
+                                <p>All</p>
+                            </div>
+                            <div class="flex gap-3">
+                                <a
+                                    class="w-[104px] border-1 border-[#D4D6D5] text-center py-1 rounded-md cursor-pointer copy_btn">
+                                    <span>
+                                        <i class="fa-regular fa-copy"></i>
+                                    </span>
+                                    Copy
+                                </a>
+                                <a id=""
+                                    class="w-[104px] border-1 border-[#D4D6D5] text-center py-1 bg-[#00A63E] text-white rounded-md cursor-pointer call_btn">
+                                    <span>
+                                        <i class="fa-solid fa-phone"></i>
+                                    </span>
+                                    Call
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Call History -->
+            <div class="shadow-md pb-4 px-4 rounded-xl">
+                <div class="w-[300px] flex items-center justify-between bg-white  px-3 py-4 rounded-xl">
+                    <div class="flex items-center gap-2">
+                        <div>
+                            <i class="fa-solid fa-clock-rotate-left text-[#5C5C5C]"></i>
+                        </div>
+                        <p class="text-[#111111] font-medium text-xl">Call History</p>
+                    </div>
+                    <div class="clear_call_history_btn">
+                        <a href="" type="button" class="btn bg-[#00A63E] rounded-full font-semibold text-white">Clear</a>
+                    </div>
+                </div>
+                <div id="clear_call_history">
+                    <div id="call_history" class="px-3 mt-4 h-[400px] overflow-y-auto">
+                        <!-- Call history items will be appended here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
 
 
     <script src="./js/javascript.js"></script>
