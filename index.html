@@ -23,7 +23,7 @@
     <!-- Navbar -->
     <header class="">
         <nav class="py-6 px-4 bg-white">
-            <div class="max-w-[1200px] mx-auto">
+            <div class="max-w-[1300px] mx-auto">
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                     <a href="">
                         <div class="flex items-center justify-center gap-2">
@@ -38,7 +38,7 @@
                     </a>
                     <div class="flex items-center gap-5">
                         <div class="bg-[#41FF6B]/10 rounded-full py-1 md:py-2 px-3 md:px-5">
-                            <span id="heartValue" class="font-bold">0</span>
+                            <span id="heartInnerValue" class="font-bold">0</span>
                             <span>
                                 <img src="./assets/heart.png" alt="" class="w-6 h-6 inline-block ml-1">
                             </span>
@@ -60,7 +60,7 @@
 
         <!-- Banner -->
         <div class="bg-[url('./assets/banner-bg.jpg')] bg-cover bg-no-repeat bg-center py-3 px-3 lg:px-0">
-            <div class="max-w-[1200px] mx-auto flex flex-col items-center gap-3">
+            <div class="max-w-[1300px] mx-auto flex flex-col items-center gap-3">
                 <div>
                     <img src="./assets/logo.png" alt="" class="w-24 h-24">
                 </div>
@@ -76,42 +76,46 @@
     </header>
 
     <!-- Main -->
-    <main class="max-w-[1200px] mx-auto pt-4">
+    <main class="max-w-[1300px] mx-auto pt-4">
         <div class="flex justify-between items-start gap-5 pt-12 pb-20 px-3 lg:px-0">
-            <div class="max-w-[900px]">
-                <div class="grid grid-cols-3 gap-6">
-    
+            <div class="max-w-[1000px]">
+                <div class="grid grid-cols-3 gap-4">
+
                     <!-- National Emergency -->
                     <div class="card bg-base-100 shadow-sm">
                         <div class="flex justify-between items-center p-3">
                             <div class="p-[14px] bg-[#FFE3E2] rounded-2xl">
                                 <img src="./assets/emergency.png" alt="" class="w-8 h-8">
                             </div>
-                            <div id="national_emergency_number" class="cursor-pointer">
-                                <i class="fa-regular fa-heart text-2xl text-[#5C5C5C] heartButton"></i>
+                            <div class="cursor-pointer heartButton">
+                                <i class="fa-regular fa-heart text-2xl text-[#5C5C5C] "></i>
                             </div>
                         </div>
                         <div class="p-3">
                             <div>
-                                <h2 id="" class="title">National Emergency Number</h2>
-                                <p>
+                                <h2 id="" class="title text-[#111111] font-bold text-xl">
+                                    National Emergency Number
+                                
+                                </h2>
+                                <p class="text-[#5C5C5C] text-lg mb-6">
                                     National Emergency
                                 </p>
-                                <div id="" class="service_number">
+                                <div class="service_number text-3xl font-bold mb-3">
                                     999
                                 </div>
-                                <p>All</p>
+                                <p class="text-lg text-[#5C5C5C] bg-[#F2F2F2] py-[6] px-4 rounded-full inline-block ">
+                                    All</p>
                             </div>
-                            <div class="flex gap-3">
+                            <div class="flex gap-3 mt-6">
                                 <a
-                                    class="w-[104px] border-1 border-[#D4D6D5] text-center py-1 rounded-md cursor-pointer copy_btn">
+                                    class="w-[132px] border-1 border-[#D4D6D5] text-center py-1 rounded-md cursor-pointer copy_btn">
                                     <span>
                                         <i class="fa-regular fa-copy"></i>
                                     </span>
                                     Copy
                                 </a>
                                 <a id=""
-                                    class="w-[104px] border-1 border-[#D4D6D5] text-center py-1 bg-[#00A63E] text-white rounded-md cursor-pointer call_btn">
+                                    class="w-[132px] border-1 border-[#D4D6D5] text-center py-1 bg-[#00A63E] text-white rounded-md cursor-pointer call_btn">
                                     <span>
                                         <i class="fa-solid fa-phone"></i>
                                     </span>
@@ -120,38 +124,39 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <!-- Police Helpline Number -->
                     <div class="card bg-base-100 shadow-sm">
                         <div class="flex justify-between items-center p-3">
                             <div class="p-[14px] bg-[#FFE3E2] rounded-2xl">
                                 <img src="./assets/police.png" alt="" class="w-8 h-8">
                             </div>
-                            <div id="police_helpline_number" class="cursor-pointer">
+                            <div class="cursor-pointer heartButton">
                                 <i class="fa-regular fa-heart text-2xl text-[#5C5C5C]"></i>
                             </div>
                         </div>
                         <div class="p-3">
                             <div>
-                                <h2 class="title">Police Helpline Number</h2>
-                                <p>
+                                <h2 class="title text-[#111111] font-bold text-xl">Police Helpline Number</h2>
+                                <p class="text-[#5C5C5C] text-lg mb-6">
                                     Police
                                 </p>
-                                <div class="service_number">
+                                <div class="service_number text-3xl font-bold mb-3">
                                     999
                                 </div>
-                                <p>All</p>
+                                <p class="text-lg text-[#5C5C5C] bg-[#F2F2F2] py-[6] px-4 rounded-full inline-block ">
+                                    Police</p>
                             </div>
-                            <div class="flex gap-3" onclick="navigator.clipboard.writeText(this.dataset.copy)">
+                            <div class="flex gap-3 mt-6" onclick="navigator.clipboard.writeText(this.dataset.copy)">
                                 <a
-                                    class="w-[104px] border-1 border-[#D4D6D5] text-center py-1 rounded-md cursor-pointer copy_btn">
+                                    class="w-[132px] border-1 border-[#D4D6D5] text-center py-1 rounded-md cursor-pointer copy_btn">
                                     <span>
                                         <i class="fa-regular fa-copy"></i>
                                     </span>
                                     Copy
                                 </a>
                                 <a id=""
-                                    class="w-[104px] border-1 border-[#D4D6D5] text-center py-1 bg-[#00A63E] text-white rounded-md cursor-pointer call_btn">
+                                    class="w-[132px] border-1 border-[#D4D6D5] text-center py-1 bg-[#00A63E] text-white rounded-md cursor-pointer call_btn">
                                     <span>
                                         <i class="fa-solid fa-phone"></i>
                                     </span>
@@ -160,38 +165,287 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <!-- Fire Service Number -->
                     <div class="card bg-base-100 shadow-sm">
                         <div class="flex justify-between items-center p-3">
                             <div class="p-[14px] bg-[#FFE3E2] rounded-2xl">
                                 <img src="./assets/police.png" alt="" class="w-8 h-8">
                             </div>
-                            <div id="fire_service_number" class="cursor-pointer heartButton">
+                            <div class="cursor-pointer heartButton">
                                 <i class="fa-regular fa-heart text-2xl text-[#5C5C5C]"></i>
                             </div>
                         </div>
                         <div class="p-3">
                             <div>
-                                <h2 class="title">Fire Service Number</h2>
-                                <p>
+                                <h2 class="title text-[#111111] font-bold text-xl">Fire Service Number</h2>
+                                <p class="text-[#5C5C5C] text-lg mb-6">
                                     Fire Service
                                 </p>
-                                <div class="service_number">
+                                <div class="service_number text-3xl font-bold mb-3">
                                     999
                                 </div>
-                                <p>All</p>
+                                <p class="text-lg text-[#5C5C5C] bg-[#F2F2F2] py-[6] px-4 rounded-full inline-block ">
+                                    Fire</p>
+                                </div>
+                                <div class="flex gap-3 mt-6">
+                                    <a class="w-[132px] border-1 border-[#D4D6D5] text-center py-1 rounded-md cursor-pointer copy_btn">
+                                        <span>
+                                            <i class="fa-regular fa-copy"></i>
+                                        </span>
+                                        Copy
+                                    </a>
+                                    <a id=""
+                                        class="w-[132px] border-1 border-[#D4D6D5] text-center py-1 bg-[#00A63E] text-white rounded-md cursor-pointer call_btn">
+                                        <span>
+                                            <i class="fa-solid fa-phone"></i>
+                                        </span>
+                                        Call
+                                    </a>
+                                </div>
+                                </div>
+                                </div>
+                                
+                                <!-- Ambulance Service -->
+                                <div class="card bg-base-100 shadow-sm">
+                                    <div class="flex justify-between items-center p-3">
+                                        <div class="p-[14px] bg-[#FFE3E2] rounded-2xl">
+                                            <img src="./assets/ambulance.png" alt="" class="w-8 h-8">
+                                        </div>
+                                        <div class="cursor-pointer heartButton">
+                                            <i class="fa-regular fa-heart text-2xl text-[#5C5C5C] "></i>
+                                        </div>
+                                    </div>
+                                    <div class="p-3">
+                                        <div>
+                                            <h2 id="" class="title text-[#111111] font-bold text-xl">
+                                                Ambulance Service
+                                            </h2>
+                                            <p class="text-[#5C5C5C] text-lg mb-6">
+                                                Ambulance
+                                            </p>
+                                            <div class="service_number text-3xl font-bold mb-3">
+                                                1994-999999
+                                            </div>
+                                            <p class="text-lg text-[#5C5C5C] bg-[#F2F2F2] py-[6] px-4 rounded-full inline-block ">
+                                                Health</p>
+                                        </div>
+                                        <div class="flex gap-3 mt-6">
+                                            <a class="w-[132px] border-1 border-[#D4D6D5] text-center py-1 rounded-md cursor-pointer copy_btn">
+                                                <span>
+                                                    <i class="fa-regular fa-copy"></i>
+                                                </span>
+                                                Copy
+                                            </a>
+                                            <a id=""
+                                                class="w-[132px] border-1 border-[#D4D6D5] text-center py-1 bg-[#00A63E] text-white rounded-md cursor-pointer call_btn">
+                                                <span>
+                                                    <i class="fa-solid fa-phone"></i>
+                                                </span>
+                                                Call
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Women & Child Helpline -->
+                                <div class="card bg-base-100 shadow-sm">
+                                    <div class="flex justify-between items-center p-3">
+                                        <div class="p-[14px] bg-[#FFE3E2] rounded-2xl">
+                                            <img src="./assets/emergency.png" alt="" class="w-8 h-8">
+                                        </div>
+                                        <div id="police_helpline_number" class="cursor-pointer heartButton">
+                                            <i class="fa-regular fa-heart text-2xl text-[#5C5C5C]"></i>
+                                        </div>
+                                    </div>
+                                    <div class="p-3">
+                                        <div>
+                                            <h2 class="title text-[#111111] font-bold text-xl">Women & Child Helpline</h2>
+                                            <p class="text-[#5C5C5C] text-lg mb-6">
+                                                Women & Child Helpline
+                                            </p>
+                                            <div class="service_number text-3xl font-bold mb-3">
+                                                109
+                                            </div>
+                                            <p class="text-lg text-[#5C5C5C] bg-[#F2F2F2] py-[6] px-4 rounded-full inline-block ">
+                                                Help</p>
+                                        </div>
+                                        <div class="flex gap-3 mt-6" onclick="navigator.clipboard.writeText(this.dataset.copy)">
+                                            <a class="w-[132px] border-1 border-[#D4D6D5] text-center py-1 rounded-md cursor-pointer copy_btn">
+                                                <span>
+                                                    <i class="fa-regular fa-copy"></i>
+                                                </span>
+                                                Copy
+                                            </a>
+                                            <a id=""
+                                                class="w-[132px] border-1 border-[#D4D6D5] text-center py-1 bg-[#00A63E] text-white rounded-md cursor-pointer call_btn">
+                                                <span>
+                                                    <i class="fa-solid fa-phone"></i>
+                                                </span>
+                                                Call
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Anti-Corruption Helpline -->
+                                <div class="card bg-base-100 shadow-sm">
+                                    <div class="flex justify-between items-center p-3">
+                                        <div class="p-[14px] bg-[#FFE3E2] rounded-2xl">
+                                            <img src="./assets/emergency.png" alt="" class="w-8 h-8">
+                                        </div>
+                                        <div id="fire_service_number" class="cursor-pointer heartButton">
+                                            <i class="fa-regular fa-heart text-2xl text-[#5C5C5C]"></i>
+                                        </div>
+                                    </div>
+                                    <div class="p-3">
+                                        <div>
+                                            <h2 class="title text-[#111111] font-bold text-xl">Anti-Corruption Helpline</h2>
+                                            <p class="text-[#5C5C5C] text-lg mb-6">
+                                                Anti-Corruption
+                                            </p>
+                                            <div class="service_number text-3xl font-bold mb-3">
+                                                106
+                                            </div>
+                                            <p class="text-lg text-[#5C5C5C] bg-[#F2F2F2] py-[6] px-4 rounded-full inline-block ">
+                                                Govt.
+                                            </p>
+                                        </div>
+                                        <div class="flex gap-3 mt-6">
+                                            <a class="w-[132px] border-1 border-[#D4D6D5] text-center py-1 rounded-md cursor-pointer copy_btn">
+                                                <span>
+                                                    <i class="fa-regular fa-copy"></i>
+                                                </span>
+                                                Copy
+                                            </a>
+                                            <a id=""
+                                                class="w-[132px] border-1 border-[#D4D6D5] text-center py-1 bg-[#00A63E] text-white rounded-md cursor-pointer call_btn">
+                                                <span>
+                                                    <i class="fa-solid fa-phone"></i>
+                                                </span>
+                                                Call
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Electricity Helpline -->
+                                <div class="card bg-base-100 shadow-sm">
+                                    <div class="flex justify-between items-center p-3">
+                                        <div class="p-[14px] bg-[#FFE3E2] rounded-2xl">
+                                            <img src="./assets/fire-service.png" alt="" class="w-8 h-8">
+                                        </div>
+                                        <div id="national_emergency_number" class="cursor-pointer heartButton">
+                                            <i class="fa-regular fa-heart text-2xl text-[#5C5C5C] "></i>
+                                        </div>
+                                    </div>
+                                    <div class="p-3">
+                                        <div>
+                                            <h2 id="" class="title text-[#111111] font-bold text-xl">
+                                                Electricity Helpline
+                                
+                                            </h2>
+                                            <p class="text-[#5C5C5C] text-lg mb-6">
+                                                Electricity Outage
+                                            </p>
+                                            <div class="service_number text-3xl font-bold mb-3">
+                                                16216
+                                            </div>
+                                            <p class="text-lg text-[#5C5C5C] bg-[#F2F2F2] py-[6] px-4 rounded-full inline-block ">
+                                                Electricity
+                                            </p>
+                                        </div>
+                                        <div class="flex gap-3 mt-6">
+                                            <a class="w-[132px] border-1 border-[#D4D6D5] text-center py-1 rounded-md cursor-pointer copy_btn">
+                                                <span>
+                                                    <i class="fa-regular fa-copy"></i>
+                                                </span>
+                                                Copy
+                                            </a>
+                                            <a id=""
+                                                class="w-[132px] border-1 border-[#D4D6D5] text-center py-1 bg-[#00A63E] text-white rounded-md cursor-pointer call_btn">
+                                                <span>
+                                                    <i class="fa-solid fa-phone"></i>
+                                                </span>
+                                                Call
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Brac Helpline-->
+                                <div class="card bg-base-100 shadow-sm">
+                                    <div class="flex justify-between items-center p-3">
+                                        <div class="p-[14px] bg-[#FFE3E2] rounded-2xl">
+                                            <img src="./assets/brac.png" alt="" class="w-8 h-8">
+                                        </div>
+                                        <div id="police_helpline_number" class="cursor-pointer heartButton">
+                                            <i class="fa-regular fa-heart text-2xl text-[#5C5C5C]"></i>
+                                        </div>
+                                    </div>
+                                    <div class="p-3">
+                                        <div>
+                                            <h2 class="title text-[#111111] font-bold text-xl">Brac Helpline</h2>
+                                            <p class="text-[#5C5C5C] text-lg mb-6">
+                                                Brac
+                                            </p>
+                                            <div class="service_number text-3xl font-bold mb-3">
+                                                16445
+                                            </div>
+                                            <p class="text-lg text-[#5C5C5C] bg-[#F2F2F2] py-[6] px-4 rounded-full inline-block ">
+                                                NGO
+                                            </p>
+                                        </div>
+                                        <div class="flex gap-3 mt-6" onclick="navigator.clipboard.writeText(this.dataset.copy)">
+                                            <a class="w-[132px] border-1 border-[#D4D6D5] text-center py-1 rounded-md cursor-pointer copy_btn">
+                                                <span>
+                                                    <i class="fa-regular fa-copy"></i>
+                                                </span>
+                                                Copy
+                                            </a>
+                                            <a id=""
+                                                class="w-[132px] border-1 border-[#D4D6D5] text-center py-1 bg-[#00A63E] text-white rounded-md cursor-pointer call_btn">
+                                                <span>
+                                                    <i class="fa-solid fa-phone"></i>
+                                                </span>
+                                                Call
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Bangladesh Railway Helpline  -->
+                                <div class="card bg-base-100 shadow-sm">
+                                    <div class="flex justify-between items-center p-3">
+                                        <div class="p-[14px] bg-[#FFE3E2] rounded-2xl">
+                                            <img src="./assets/Bangladesh-Railway.png" alt="" class="w-8 h-8">
+                                        </div>
+                                        <div id="fire_service_number" class="cursor-pointer heartButton">
+                                            <i class="fa-regular fa-heart text-2xl text-[#5C5C5C]"></i>
+                                        </div>
+                                    </div>
+                                    <div class="p-3">
+                                        <div>
+                                            <h2 class="title text-[#111111] font-bold text-xl">Bangladesh Railway Helpline</h2>
+                                            <p class="text-[#5C5C5C] text-lg mb-6">
+                                                Bangladesh Railway
+                                            </p>
+                                            <div class="service_number text-3xl font-bold mb-3">
+                                                163
+                                            </div>
+                                            <p class="text-lg text-[#5C5C5C] bg-[#F2F2F2] py-[6] px-4 rounded-full inline-block ">
+                                                Travel
+                                            </p>
                             </div>
-                            <div class="flex gap-3">
+                            <div class="flex gap-3 mt-6">
                                 <a
-                                    class="w-[104px] border-1 border-[#D4D6D5] text-center py-1 rounded-md cursor-pointer copy_btn">
+                                    class="w-[132px] border-1 border-[#D4D6D5] text-center py-1 rounded-md cursor-pointer copy_btn">
                                     <span>
                                         <i class="fa-regular fa-copy"></i>
                                     </span>
                                     Copy
                                 </a>
                                 <a id=""
-                                    class="w-[104px] border-1 border-[#D4D6D5] text-center py-1 bg-[#00A63E] text-white rounded-md cursor-pointer call_btn">
+                                    class="w-[132px] border-1 border-[#D4D6D5] text-center py-1 bg-[#00A63E] text-white rounded-md cursor-pointer call_btn">
                                     <span>
                                         <i class="fa-solid fa-phone"></i>
                                     </span>
@@ -200,11 +454,12 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
-    
+
             <!-- Call History -->
-            <div class="shadow-md pb-4 px-4 rounded-xl">
+            <div class="shadow-md pb-4 px-2 rounded-xl h-[996px]">
                 <div class="w-[300px] flex items-center justify-between bg-white  px-3 py-4 rounded-xl">
                     <div class="flex items-center gap-2">
                         <div>
@@ -217,7 +472,7 @@
                     </div>
                 </div>
                 <div id="clear_call_history">
-                    <div id="call_history" class="px-3 mt-4 h-[400px] overflow-y-auto">
+                    <div id="call_history" class="px-3 mt-4 overflow-y-auto">
                         <!-- Call history items will be appended here -->
                     </div>
                 </div>

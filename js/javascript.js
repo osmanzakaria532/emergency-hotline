@@ -1,28 +1,13 @@
-const nationalEmergencyNumber = document.getElementById(
-  "national_emergency_number"
-);
-const policeHelplineNumber = document.getElementById("police_helpline_number");
-const fireServiceNumber = document.getElementById("fire_service_number");
+// Heart button functionality
+const heartInnerValue = document.getElementById("heartInnerValue");
+
 const heartButtons = document.getElementsByClassName("heartButton");
-
-// Function to update heart
-nationalEmergencyNumber.addEventListener("click", function () {
-  const heartValue = document.getElementById("heartValue");
-  let currentValue = parseInt(heartValue.innerText);
-  heartValue.innerText = currentValue + 1;
-});
-
-policeHelplineNumber.addEventListener("click", function () {
-  const heartValue = document.getElementById("heartValue");
-  let currentValue = parseInt(heartValue.innerText);
-  heartValue.innerText = currentValue + 1;
-});
-
-fireServiceNumber.addEventListener("click", function () {
-  const heartValue = document.getElementById("heartValue");
-  let currentValue = parseInt(heartValue.innerText);
-  heartValue.innerText = currentValue + 1;
-});
+for (const heartButton of heartButtons) {
+  heartButton.addEventListener("click", function () {
+    let currentValue = parseInt(heartInnerValue.innerText);
+    heartInnerValue.innerText = currentValue + 1;
+  });
+}
 
 // Function
 const coinsEl = document.getElementById("coins");
@@ -39,7 +24,9 @@ for (const card of cards) {
     let currentCoins = parseInt(coinsEl.innerText);
 
     if (currentCoins < 20) {
-      alert("Not enough coins to make a call.");
+      alert(
+        "Not enough coins to make a call. Plz make sure you have at least 20 coins."
+      );
       return;
     }
 
@@ -69,12 +56,14 @@ const copyBtns = document.getElementsByClassName("copy_btn");
 
 for (const copyBtn of copyBtns) {
   const civ = document.getElementById("copy_increment_value");
+
   copyBtn.addEventListener("click", function () {
     let currentValue = parseInt(civ.innerText);
     civ.innerText = currentValue + 1;
-  });
-  const serviceNumber = document.getElementById("service_number");
-  copyBtn.addEventListener("click", function () {
+
+    const card = copyBtn.closest(".card");
+    const serviceNumber = card.querySelector(".service_number");
+
     navigator.clipboard.writeText(serviceNumber.innerText);
 
     alert("Hotline copied: " + serviceNumber.innerText);
